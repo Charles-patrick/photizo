@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------- */
+/* Design tokens                                                         */
+/* These are sampled from the Figma brand-color sheet. Swap the hex      */
+/* values below for the exact ones from Figma's inspect panel if any     */
+/* drift is spotted — the token NAMES are what the rest of the app uses, */
+/* so changing a value here updates it everywhere.                       */
+/* -------------------------------------------------------------------- */
+@theme {
+  /* Olive Green — primary brand color */
+  --color-olive-50: #eff0ee;
+  --color-olive-100: #c7ccc2;
+  --color-olive-200: #9aa48e;
+  --color-olive-400: #3c5a33;
+  --color-olive-500: #2a4022; /* Normal */
+  --color-olive-600: #26382b;
+  --color-olive-700: #1e301a; /* Dark */
+  --color-olive-800: #142310; /* Dark active */
+  --color-olive-900: #0f1200; /* Darker */
+  --color-olive-150: #bdc4ba; /* Darker */
+
+  /* Sunlit Gold — primary brand color (cream/gold) */
+  --color-gold-50: #fdf9ea; /* Light — page cream background */
+  --color-gold-100: #fbf0d0;
+  --color-gold-200: #ffe4a2; /* Normal */
+  --color-gold-300: #e9cf8e;
+  --color-gold-400: #fff7e2;
+  --color-gold-500: #b99b5e; /* Dark */
+  --color-gold-700: #6f6748; /* Dark active */
+  --color-gold-900: #595038; /* Darker */
+
+  /* Teal — accent color */
+  --color-teal-100: #dcecec;
+  --color-teal-300: #9dc7c9;
+  --color-teal-500: #449297; /* Normal */
+  --color-teal-700: #2e6569; /* Dark */
+  --color-teal-900: #163638; /* Darker */
+
+  /* Ember — secondary brand color */
+  --color-ember-100: #f3d9c9;
+  --color-ember-300: #d98753;
+  --color-ember-500: #c24507; /* Normal */
+  --color-ember-700: #8a3105; /* Dark */
+  --color-ember-900: #4a1a03; /* Darker */
+
+  /* KYC status colors */
+  --color-kyc-verified-bg: #dbf9d2;
+  --color-kyc-verified-text: #5f8a50;
+  --color-kyc-failed-bg: #ecc5b2;
+  --color-kyc-failed-text: #c24507;
+  --color-kyc-processing-bg: #e6f1f1;
+  --color-kyc-processing-text: #076e75;
+
+  /* Inspection status colors */
+  --color-inspection-upcoming-bg: #ffe4a2;
+  --color-inspection-upcoming-text: #998961;
+  --color-inspection-completed-bg: #dbf9d2;
+  --color-inspection-completed-text: #5f8a50;
+  --color-inspection-cancelled-bg: #c2450747;
+  --color-inspection-cancelled-text: #c24507;
+
+  /* Charcoal — neutral */
+  --color-charcoal-50: #e8e8e8;
+  --color-charcoal-300: #6b6b6b;
+  --color-charcoal-600: #1f2021; /* Normal */
+  --color-charcoal-900: #0a0a0a;
+
+  /* Soft Ivory — neutral */
+  --color-ivory-50: #fdf9ea;
+  --color-ivory-100: #dbd8b8;
+  --color-ivory-300: #c5bf92;
+  --color-ivory-500: #a39d6c;
+
+  /* Fonts */
+  --font-display: var(--font-kalice), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-kalice), Georgia, "Times New Roman", serif;
+
+  /* Container */
+  --container-8xl: 90rem;
+}
+
+body {
+  background: var(--color-gold-50);
+  color: var(--color-charcoal-600);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Utility: underline offset for the arrow-link buttons */
+.link-underline {
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+}
+
+/* Accordion answer expand/collapse animation */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+.accordion-panel.is-open {
+  grid-template-rows: 1fr;
+}
+.accordion-panel > div {
+  overflow: hidden;
+}
+.h-screen-safe {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* MDX article defaults without requiring the typography plugin. */
+.prose {
+  color: color-mix(in srgb, var(--color-charcoal-600) 82%, transparent);
+  line-height: 1.75;
+}
+.prose > * + * {
+  margin-top: 1.25em;
+}
+.prose h2,
+.prose h3 {
+  color: var(--color-charcoal-600);
+  font-family: var(--font-display);
+  line-height: 1.25;
+}
+.prose h2 {
+  font-size: 1.5rem;
+}
+.prose h3 {
+  font-size: 1.25rem;
+}
+.prose a {
+  color: var(--color-olive-500);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}

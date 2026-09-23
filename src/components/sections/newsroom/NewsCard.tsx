@@ -15,6 +15,7 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
             src={article.coverImage}
             alt={article.title}
             fill
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>

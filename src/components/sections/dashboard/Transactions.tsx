@@ -76,6 +76,7 @@ export default function Transactions() {
                       src={property.image}
                       alt={property.imageAlt}
                       fill
+                      sizes="64px"
                       className="object-cover"
                     />
                   </div>

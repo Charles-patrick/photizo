@@ -3,7 +3,6 @@ import Image from "next/image";
 
 export default function Testimonials() {
   const [featured, ...rest] = testimonials;
-
   return (
     <section className="bg-olive-500 py-5 sm:py-7 lg:py-14 border-t border-gold-50">
       <div className="mx-auto max-w-8xl px-15 sm:px-18 lg:px-44">
@@ -15,8 +14,8 @@ export default function Testimonials() {
               width={30}
               height={30}
             />
-          </span>{" "}
-          <h2 className="font-display text-2xl font-semibold text-gold-50 sm:text-3xl">
+          </span>
+          <h2 className="font-display text-xl font-semibold text-gold-50 sm:text-2xl">
             CLIENT TESTIMONIALS
           </h2>
           <span className="flex items-center text-olive-500">
@@ -36,6 +35,7 @@ export default function Testimonials() {
               src={featured.image}
               alt={`Portrait of ${featured.name}`}
               fill
+              sizes="(max-width: 1023px) 100vw, 36vw"
               priority
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
@@ -49,6 +49,7 @@ export default function Testimonials() {
                     src={featured.image}
                     alt={featured.name}
                     fill
+                    sizes="32px"
                     className="object-cover"
                   />
                 </span>
@@ -71,6 +72,7 @@ export default function Testimonials() {
                     src={t.image}
                     alt={t.name}
                     fill
+                    sizes="32px"
                     className="object-cover"
                   />
                 </span>

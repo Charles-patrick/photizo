@@ -54,6 +54,7 @@ export default function Gallery({ property }: { property: Property }) {
             src={images[active]}
             alt={property.imageAlt}
             fill
+            sizes="100vw"
             priority
             className="object-cover"
           />
@@ -93,7 +94,13 @@ export default function Gallery({ property }: { property: Property }) {
                   i === active ? "ring-olive-500" : "ring-transparent",
                 )}
               >
-                <Image src={src} alt="" fill className="object-cover" />
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(max-width: 639px) 33vw, 128px"
+                  className="object-cover"
+                />
               </button>
             ))}
           </div>

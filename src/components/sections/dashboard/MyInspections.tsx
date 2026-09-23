@@ -42,6 +42,7 @@ export default function MyInspections() {
                 src={inspection.image}
                 alt={inspection.propertyName}
                 fill
+                sizes="64px"
                 className="object-cover"
               />
             </div>

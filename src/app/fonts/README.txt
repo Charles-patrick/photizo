@@ -1,3 +1,3 @@
-Put your real Kalice-Trial-Regular.woff2, Kalice-Trial-Medium.woff2, and
-Kalice-Trial-Bold.woff2 files here. layout.tsx already points at these
+The app uses the Cormorant Garamond variable font in the Cormorant_Garamond
+folder. Its normal and italic font files are registered in layout.tsx.
 three exact filenames.

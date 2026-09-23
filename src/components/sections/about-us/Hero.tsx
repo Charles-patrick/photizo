@@ -21,13 +21,13 @@ export default function Hero() {
           src={aboutHero.image}
           alt={aboutHero.imageAlt}
           fill
-          priority
           sizes="100vw"
+          priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/45" />
 
-        <h1 className="relative z-10 px-5 text-center font-display text-2xl font-semibold uppercase tracking-[0.15em] text-gold-50 sm:text-3xl md:text-4xl lg:text-5xl">
+        <h1 className="relative z-10 px-5 text-center font-display text-2xl font-semibold uppercase tracking-[0.15em] text-gold-50 sm:text-3xl md:text-4xl">
           Get to Know{" "}
           <span className="text-ember-500">{aboutHero.highlightWord}</span>
         </h1>
@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Intro copy half */}
       <section className="flex min-h-100 items-center bg-gold-50 py-10 sm:min-h-110 sm:py-12 md:py-16 lg:min-h-120 lg:py-20">
         <div className="mx-auto max-w-8xl text-center px-5 sm:px-8 md:px-12 lg:px-24">
-          <h2 className="mx-auto font-display text-xl font-medium leading-snug text-charcoal-600 sm:text-2xl md:text-3xl lg:text-4xl">
+          <h2 className="mx-auto font-display text-xl font-medium leading-snug text-charcoal-600 sm:text-2xl md:text-3xl ">
             {aboutIntro.heading}
           </h2>
           <div className="mx-auto mt-6 flex flex-col gap-4 sm:mt-8 sm:gap-5">

@@ -11,7 +11,7 @@ export default function ContactForm() {
     <section className="bg-gold-50 py-14 sm:py-16 md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-8xl gap-12 px-5 sm:px-8 md:px-12 lg:grid-cols-2 lg:gap-16 lg:px-16 xl:px-28 2xl:px-44">
         <div>
-          <h2 className="font-display text-2xl font-medium leading-snug text-charcoal-600 sm:text-3xl lg:text-4xl">
+          <h2 className="font-display text-2xl font-medium leading-snug text-charcoal-600 sm:text-3xl ">
             {contactUsInfo.heading}
           </h2>
 

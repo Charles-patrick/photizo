@@ -1,4 +1,3 @@
-// components/layout/Navbar.tsx
 "use client";
 
 import Image from "next/image";
@@ -8,8 +7,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ArrowLink from "@/components/ui/ArrowLink";
 
-// Only exact-match listing/landing pages that have a hero image behind the navbar.
-// Anything not in this list (including every dynamic detail page) is solid immediately.
 const HERO_ROUTES = [
   "/",
   "/newsroom",
@@ -36,15 +33,17 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!hasHero) return;
+
     const onScroll = () => setScrolled(window.scrollY > 40);
+
     onScroll();
     window.addEventListener("scroll", onScroll);
+
     return () => window.removeEventListener("scroll", onScroll);
   }, [hasHero]);
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
-    // startsWith handles inner pages: /newsroom/some-article still highlights "Newsroom"
     return pathname === href || pathname.startsWith(href + "/");
   }
 
@@ -54,27 +53,30 @@ export default function Navbar() {
         isSolid ? "bg-olive-500" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 py-2 sm:px-8 md:px-12 lg:px-16 xl:px-28 2xl:px-44">
+      <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 py-2 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
+        {/* Logo */}
         <Link
           href="/"
-          className="relative block h-10 w-32 sm:h-12 sm:w-40"
+          className="relative block h-10 w-32 shrink-0 sm:h-12 sm:w-40"
           aria-label="Photizo Properties home"
         >
           <Image
             src="/logo-light.png"
             alt="Photizo Properties"
             fill
+            sizes="(max-width: 639px) 128px, 160px"
             priority
             className="object-contain object-left"
           />
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        {/* Desktop navigation */}
+        <ul className="hidden shrink-0 items-center gap-6 lg:flex xl:gap-7">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm uppercase transition-colors ${
+                className={`whitespace-nowrap text-sm uppercase tracking-wide transition-colors ${
                   isActive(link.href)
                     ? "text-gold-200"
                     : "text-gold-50/90 hover:text-gold-50"
@@ -86,20 +88,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <ArrowLink
-          href="/login"
-          variant="onDark"
-          className="hidden lg:inline-flex"
-        >
-          Get Started
-        </ArrowLink>
+        {/* Desktop Get Started */}
+        <div className="hidden shrink-0 lg:block">
+          <ArrowLink
+            href="/login"
+            variant="onDark"
+            className="mt-3 whitespace-nowrap"
+          >
+            Get Started
+          </ArrowLink>
+        </div>
 
+        {/* Mobile menu button */}
         <button
           type="button"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
-          className="flex h-10 w-10 items-center justify-center text-gold-50 lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center text-gold-50 lg:hidden"
         >
           {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -113,7 +119,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`block text-sm uppercase transition-colors ${
+                  className={`block text-base uppercase transition-colors ${
                     isActive(link.href)
                       ? "text-gold-200"
                       : "text-gold-50/90 hover:text-gold-50"
@@ -124,6 +130,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
           <ArrowLink href="/login" variant="onDark" className="mt-5">
             Get Started
           </ArrowLink>

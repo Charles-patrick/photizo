@@ -13,6 +13,7 @@ export default function MediaGrid({ items }: { items: MediaItem[] }) {
             src={item.image}
             alt={item.caption ?? "Photizo Properties media"}
             fill
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent px-4 pb-4 pt-12 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

@@ -31,15 +31,30 @@ export default function Earnings() {
 
   return (
     <div>
-      <h1 className="font-display text-2xl font-semibold text-charcoal-600">Earnings</h1>
+      <h1 className="font-display text-2xl font-semibold text-charcoal-600">
+        Earnings
+      </h1>
       <p className="mt-1 text-sm text-charcoal-600/60">
-        Commission earned across your deals, at a {COMMISSION_RATE * 100}% referral rate.
+        Commission earned across your deals, at a {COMMISSION_RATE * 100}%
+        referral rate.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <SummaryCard label="Total Earned" value={formatNaira(totalEarned)} color="bg-[#5F8A50]" />
-        <SummaryCard label="Pending" value={formatNaira(totalPending)} color="bg-[#C24507]" />
-        <SummaryCard label="Lifetime Deals" value={String(deals.length)} color="bg-[#076E75]" />
+        <SummaryCard
+          label="Total Earned"
+          value={formatNaira(totalEarned)}
+          color="bg-[#5F8A50]"
+        />
+        <SummaryCard
+          label="Pending"
+          value={formatNaira(totalPending)}
+          color="bg-[#C24507]"
+        />
+        <SummaryCard
+          label="Lifetime Deals"
+          value={String(deals.length)}
+          color="bg-[#076E75]"
+        />
       </div>
 
       <div className="mt-6 overflow-x-auto rounded-2xl bg-gold-50 p-5 sm:p-6">
@@ -54,21 +69,35 @@ export default function Earnings() {
           </thead>
           <tbody className="divide-y divide-charcoal-600/10">
             {rows.map(({ deal, earned, pending }) => {
-              const property = featuredProperties.find((p) => p.id === deal.propertyId);
+              const property = featuredProperties.find(
+                (p) => p.id === deal.propertyId,
+              );
               if (!property) return null;
               return (
                 <tr key={deal.id}>
                   <td className="py-3">
                     <div className="flex items-center gap-3">
                       <div className="relative h-10 w-12 shrink-0 overflow-hidden rounded-lg">
-                        <Image src={property.image} alt={property.imageAlt} fill className="object-cover" />
+                        <Image
+                          src={property.image}
+                          alt={property.imageAlt}
+                          fill
+                          sizes="48px"
+                          className="object-cover"
+                        />
                       </div>
-                      <p className="font-medium text-charcoal-600">{property.name.split(",")[0]}</p>
+                      <p className="font-medium text-charcoal-600">
+                        {property.name.split(",")[0]}
+                      </p>
                     </div>
                   </td>
                   <td className="py-3 text-charcoal-600">{deal.clientName}</td>
-                  <td className="py-3 font-semibold text-charcoal-600">{formatNaira(earned)}</td>
-                  <td className="py-3 text-charcoal-600/60">{formatNaira(pending)}</td>
+                  <td className="py-3 font-semibold text-charcoal-600">
+                    {formatNaira(earned)}
+                  </td>
+                  <td className="py-3 text-charcoal-600/60">
+                    {formatNaira(pending)}
+                  </td>
                 </tr>
               );
             })}
@@ -79,7 +108,15 @@ export default function Earnings() {
   );
 }
 
-function SummaryCard({ label, value, color }: { label: string; value: string; color: string }) {
+function SummaryCard({
+  label,
+  value,
+  color,
+}: {
+  label: string;
+  value: string;
+  color: string;
+}) {
   return (
     <div className={`rounded-2xl ${color} p-5 text-gold-50`}>
       <div className="flex items-center justify-between">

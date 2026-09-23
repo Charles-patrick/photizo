@@ -47,6 +47,7 @@ export default async function ArticlePage({ params }: Props) {
           src={article.coverImage}
           alt={article.title}
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

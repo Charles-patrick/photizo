@@ -9,6 +9,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         src={property.image}
         alt={property.imageAlt}
         fill
+        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />

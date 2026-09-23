@@ -2,7 +2,6 @@ import { featuredProperties } from "@/lib/data";
 import ArrowLink from "@/components/ui/ArrowLink";
 import Image from "next/image";
 
-
 export default function FeaturedProperties() {
   return (
     <section className="bg-olive-500">
@@ -11,7 +10,7 @@ export default function FeaturedProperties() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-200">
             Featured
           </p>
-          <h2 className="mt-2 font-display text-3xl font-semibold uppercase tracking-wide text-gold-50 sm:text-4xl">
+          <h2 className="mt-2 font-display text-xl font-semibold uppercase tracking-wide text-gold-50 sm:text-3xl">
             Properties
           </h2>
         </div>
@@ -27,6 +26,7 @@ export default function FeaturedProperties() {
                   src={property.image}
                   alt={property.imageAlt}
                   fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 ease-out"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />

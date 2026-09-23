@@ -79,6 +79,7 @@ export default function Footer() {
               src="/logo-cut.png"
               alt="Photizo Properties logo"
               fill
+              sizes="(max-width: 1023px) 100vw, 200px"
               priority
               className="object-contain"
             />
@@ -99,7 +100,7 @@ export default function Footer() {
 
         {/* Contact info */}
         <div className="text-center lg:text-left">
-          <h3 className="font-display text-lg font-semibold text-white">
+          <h3 className="font-display text-base font-semibold text-white">
             Contact Info
           </h3>
           <ul className="mt-5 space-y-4 text-sm leading-relaxed text-gold-50/90">
@@ -132,7 +133,7 @@ export default function Footer() {
 
         {/* Quick links */}
         <div className="text-center lg:text-left">
-          <h3 className="font-display text-lg font-semibold text-white">
+          <h3 className="font-display text-base font-semibold text-white">
             Quick Links
           </h3>
           <ul className="mt-5 space-y-4 text-sm text-gold-50/90 sm:space-y-5">
@@ -151,7 +152,7 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div className="text-center lg:text-left">
-          <h3 className="font-display text-lg font-semibold text-white">
+          <h3 className="font-display text-base font-semibold text-white">
             Subscribe to our Newsletter
           </h3>
           <p className="mt-5 text-sm leading-relaxed text-gold-50/90">

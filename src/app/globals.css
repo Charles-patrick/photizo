@@ -73,8 +73,8 @@
   --color-ivory-500: #a39d6c;
 
   /* Fonts */
-  --font-display: var(--font-kalice), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-kalice), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-cormorant), Georgia, "Times New Roman", serif;
 
   /* Container */
   --container-8xl: 90rem;
@@ -84,6 +84,31 @@ body {
   background: var(--color-gold-50);
   color: var(--color-charcoal-600);
   font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+@media (min-width: 640px) {
+  body {
+    font-size-adjust: 0.48;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size-adjust: 0.5;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size-adjust: 0.52;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size-adjust: 0.54;
+  }
 }
 
 h1,

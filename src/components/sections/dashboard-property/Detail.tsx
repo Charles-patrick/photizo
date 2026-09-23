@@ -55,6 +55,7 @@ export default function Detail({ property }: { property: Property }) {
               src={images[active]}
               alt={property.imageAlt}
               fill
+              sizes="(max-width: 1023px) 100vw, 58vw"
               priority
               className="object-cover"
             />
@@ -72,7 +73,13 @@ export default function Detail({ property }: { property: Property }) {
                   i === active ? "ring-olive-500" : "ring-transparent",
                 )}
               >
-                <Image src={src} alt="" fill className="object-cover" />
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1023px) 25vw, 14vw"
+                  className="object-cover"
+                />
               </button>
             ))}
           </div>

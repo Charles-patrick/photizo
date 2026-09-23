@@ -40,17 +40,9 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/35" />
 
           <div className="relative z-10 flex h-full items-center">
-            {/*
-              Single padding scale lives here, on the outer wrapper only.
-              Previously the container, this wrapper, and the <h1> each had
-              their own px-10, which triple-stacked on mobile and left very
-              little room for the actual headline. Now there's one gutter
-              that grows with the screen (px-5 on phones up to px-24 on
-              large desktop, matching the original "big screen" feel).
-            */}
             <div className="mx-auto w-full max-w-8xl px-5 sm:px-8 md:px-12 lg:px-24">
               <div className="mx-auto flex w-full max-w-xs flex-col items-center justify-center text-center sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
-                <h1 className="font-display text-3xl font-medium leading-[1.15] text-gold-50 sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl xl:text-7xl">
+                <h1 className="font-display text-3xl font-medium leading-[1.15] text-gold-50 sm:text-4xl sm:leading-[1.1] md:text-5xl lg:text-6xl">
                   {slide.headingParts.map((part, i) => (
                     <span
                       key={i}

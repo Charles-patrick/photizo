@@ -46,6 +46,7 @@ export default function InspectionDetailsModal({
             src={inspection.image}
             alt={inspection.propertyName}
             fill
+            sizes="(max-width: 639px) 100vw, 55vw"
             className="object-cover"
           />
         </div>

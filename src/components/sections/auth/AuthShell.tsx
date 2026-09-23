@@ -12,23 +12,23 @@ export default function AuthShell({ children }: { children: React.ReactNode }) {
         src="/login-bg.jpg"
         alt="Photizo Properties"
         fill
-        priority
         sizes="100vw"
+        priority
         className="object-cover"
       />
 
       <div className="relative z-10 flex w-full max-w-md flex-col items-center">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/logo-dark-clear.png"
-              alt="Photizo Properties"
-              // fill
-              width={300}
-              height={10}
-              priority
-              // sizes="10vw"
-              // className="object-cover"
-            />
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo-dark-clear.png"
+            alt="Photizo Properties"
+            // fill
+            width={300}
+            height={10}
+            priority
+            // sizes="10vw"
+            // className="object-cover"
+          />
         </div>
 
         <div className="mt-8 w-full rounded-2xl bg-gold-50 p-6 shadow-xl sm:p-8">

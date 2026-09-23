@@ -40,7 +40,7 @@ export default function ArrowLink({
   ...props
 }: ArrowLinkProps<"a"> | ArrowLinkProps<"button">) {
     const classes = clsx(
-      "group inline-flex items-center text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase transition-colors",
+      "group inline-flex items-center text-xs font-semibold tracking-[0.08em] uppercase transition-colors",
       variantClasses[variant],
       className,
     );

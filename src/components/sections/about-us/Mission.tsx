@@ -19,6 +19,7 @@ export default function Mission() {
                 src={row.image}
                 alt={row.imageAlt}
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

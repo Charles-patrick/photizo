@@ -17,7 +17,7 @@ export default function Faq() {
       */}
       <div className="mx-auto grid max-w-8xl gap-8 px-5 sm:gap-10 sm:px-8 md:px-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-16 xl:px-28 2xl:px-44">
         <div>
-          <h2 className="font-display text-2xl font-medium leading-tight text-charcoal-600 sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-medium leading-tight text-charcoal-600 sm:text-3xl ">
             Frequently Asked Questions
           </h2>
           <div className="mt-6">
@@ -41,7 +41,7 @@ export default function Faq() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 text-left sm:gap-6"
                 >
-                  <span className="font-display text-sm font-medium text-charcoal-600 sm:text-base md:text-lg">
+                  <span className="font-display text-sm font-medium text-charcoal-600 sm:text-base">
                     {item.question}
                   </span>
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-charcoal-600/40 text-charcoal-600 sm:h-7 sm:w-7">
@@ -55,7 +55,7 @@ export default function Faq() {
 
                 <div className={clsx("accordion-panel", isOpen && "is-open")}>
                   <div>
-                    <p className="pt-3 text-xs leading-relaxed text-charcoal-600/80 sm:pt-4 sm:text-sm md:text-base">
+                    <p className="pt-3 text-xs leading-relaxed text-charcoal-600/80 sm:pt-4 sm:text-sm ">
                       {item.answer}
                     </p>
                   </div>

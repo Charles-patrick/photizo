@@ -4,7 +4,9 @@ import { LogIn } from "lucide-react";
 import AuthShell from "@/components/sections/auth/AuthShell";
 import SignupForm from "@/components/sections/auth/SignupForm";
 
-export const metadata: Metadata = { title: "Customer Signup | Photizo Properties" };
+export const metadata: Metadata = {
+  title: "Customer Signup | Photizo Properties",
+};
 
 export default function SignupPage() {
   return (
@@ -15,7 +17,7 @@ export default function SignupPage() {
         </h1>
         <Link
           href="/login"
-          className="flex items-center gap-1.5 text-xs font-medium text-charcoal-600/70 hover:text-olive-500"
+          className="flex items-center gap-1.5 text-sm font-medium text-charcoal-600/70 hover:text-olive-500"
         >
           <LogIn className="h-3.5 w-3.5" />
           Login

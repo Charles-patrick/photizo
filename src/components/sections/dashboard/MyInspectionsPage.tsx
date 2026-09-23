@@ -81,6 +81,7 @@ export default function MyInspectionsPage() {
                 src={inspection.image}
                 alt={inspection.propertyName}
                 fill
+                sizes="(max-width: 639px) 100vw, 112px"
                 className="object-cover"
               />
             </div>

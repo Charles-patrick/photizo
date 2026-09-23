@@ -9,12 +9,13 @@ export default function CtaBanner() {
           src="/book-inspection.jpg"
           alt="Aerial view of a Photizo estate at dusk"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center px-5 py-12 text-center sm:px-6 sm:py-16 md:py-20">
-          <h2 className="font-display text-2xl font-medium text-gold-200 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="font-display text-2xl font-medium text-gold-200 sm:text-4xl ">
             Ready to Own a Valuable Asset?
           </h2>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-gold-200 sm:mt-4 sm:max-w-md sm:text-base md:max-w-xl md:text-lg lg:max-w-150">

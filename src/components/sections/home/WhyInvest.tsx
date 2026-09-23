@@ -26,11 +26,11 @@ export default function WhyInvest() {
                 alt="diamonddot"
                 width={30}
                 height={30}
-                className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-[30px] lg:w-[30px]"
+                className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
               />
             </span>
 
-            <h2 className="font-display text-xl font-medium text-olive-500 sm:text-2xl md:text-3xl lg:text-4xl">
+            <h2 className="font-display text-xl font-medium text-olive-500 sm:text-2xl">
               WHY INVEST WITH <span className="text-ember-500">PHOTIZO</span>?
             </h2>
 
@@ -40,7 +40,7 @@ export default function WhyInvest() {
                 alt="diamonddot"
                 width={30}
                 height={30}
-                className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-[30px] lg:w-[30px]"
+                className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 "
               />
             </span>
           </div>

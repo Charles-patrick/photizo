@@ -8,8 +8,8 @@ export default function Hero() {
         src={contactUsHero.image}
         alt={contactUsHero.imageAlt}
         fill
-        priority
         sizes="100vw"
+        priority
         className="object-cover"
       />
       <div className="absolute inset-0 bg-black/45" />

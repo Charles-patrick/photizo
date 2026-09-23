@@ -103,6 +103,7 @@ export default function DashboardSidebar() {
             src="/logo-dark-clear.png"
             alt="Photizo Properties"
             fill
+            sizes="144px"
             priority
             className="object-contain object-left"
           />

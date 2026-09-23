@@ -8,7 +8,7 @@ export default function MeetTeam() {
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-200">
           Meet the
         </p>
-        <h2 className="mt-2 font-display text-2xl font-semibold uppercase tracking-wide text-gold-200 sm:text-3xl md:text-4xl">
+        <h2 className="mt-2 font-display text-2xl font-semibold uppercase tracking-wide text-gold-200 sm:text-3xl ">
           Photizo Team
         </h2>
 
@@ -29,6 +29,7 @@ export default function MeetTeam() {
                   src={member.image}
                   alt={member.name}
                   fill
+                  sizes="(max-width: 639px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>

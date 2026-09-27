@@ -15,7 +15,7 @@ export default function LoginForm() {
   }
 
   return (
-    <form className="mt-8 flex flex-col gap-9" onSubmit={handleSubmit}>
+    <form className="mt-7 flex flex-col gap-7" onSubmit={handleSubmit}>
       <AuthField
         label="Email Address"
         name="email"

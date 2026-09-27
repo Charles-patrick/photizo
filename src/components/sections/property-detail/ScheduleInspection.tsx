@@ -11,7 +11,7 @@ export default function ScheduleInspection() {
           Create an account to schedule property visits, track your bookings,
           and receive personalized property recommendations.
         </p>
-        <ArrowLink href="/contact-us" variant="onLight">
+        <ArrowLink href="/login" variant="onLight">
           Get Started
         </ArrowLink>
       </div>

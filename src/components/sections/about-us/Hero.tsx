@@ -27,7 +27,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-black/45" />
 
-        <h1 className="relative z-10 px-5 text-center font-display text-2xl font-semibold uppercase tracking-[0.15em] text-gold-50 sm:text-3xl md:text-4xl">
+        <h1 className="relative z-10 px-5 text-center font-display text-2xl font-semibold uppercase tracking-[0.15em] text-gold-200 sm:text-3xl md:text-4xl">
           Get to Know{" "}
           <span className="text-ember-500">{aboutHero.highlightWord}</span>
         </h1>

@@ -5,17 +5,18 @@ export default function Testimonials() {
   const [featured, ...rest] = testimonials;
   return (
     <section className="bg-olive-500 py-5 sm:py-7 lg:py-14 border-t border-gold-50">
-      <div className="mx-auto max-w-8xl px-15 sm:px-18 lg:px-44">
-        <div className="mb-10 flex items-center justify-center gap-6 text-gold-200 sm:mb-14">
+      <div className="mx-auto max-w-8xl px-4 sm:px-8 lg:px-44">
+        <div className="mb-10 flex items-center justify-center gap-2 text-gold-200 sm:mb-14 sm:gap-6">
           <span className="flex items-center text-olive-500">
             <Image
               src="/left-cube-light.png"
               alt="diamonddot"
               width={30}
               height={30}
+              className="h-5 w-5 sm:h-auto sm:w-auto"
             />
           </span>
-          <h2 className="font-display text-xl font-semibold text-gold-50 sm:text-2xl">
+          <h2 className="whitespace-nowrap font-display text-lg font-semibold text-gold-50 sm:text-2xl">
             CLIENT TESTIMONIALS
           </h2>
           <span className="flex items-center text-olive-500">
@@ -24,6 +25,7 @@ export default function Testimonials() {
               alt="diamonddot"
               width={30}
               height={30}
+              className="h-5 w-5 sm:h-auto sm:w-auto"
             />
           </span>{" "}
         </div>

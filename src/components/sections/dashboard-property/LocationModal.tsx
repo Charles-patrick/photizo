@@ -1,6 +1,7 @@
 "use client";
 
 import Modal from "@/components/ui/Modal";
+import MapEmbed from "@/components/ui/MapEmbed";
 import type { Property } from "@/types";
 
 export default function LocationModal({
@@ -18,12 +19,9 @@ export default function LocationModal({
         {shortName} Location
       </h2>
       <div className="relative mt-5 aspect-video w-full overflow-hidden rounded-xl">
-        <iframe
+        <MapEmbed
           src={property.mapEmbedSrc}
           title={`${property.name} location`}
-          className="h-full w-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
     </Modal>

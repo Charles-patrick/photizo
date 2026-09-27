@@ -49,7 +49,7 @@ export default function Gallery({ property }: { property: Property }) {
         </div>
 
         {/* Main image with prev/next */}
-        <div className="relative mt-6 aspect-16/9 w-full overflow-hidden rounded-2xl sm:mt-8">
+        <div className="relative mt-6 aspect-16/7 w-full overflow-hidden rounded-2xl sm:mt-8">
           <Image
             src={images[active]}
             alt={property.imageAlt}
@@ -82,7 +82,7 @@ export default function Gallery({ property }: { property: Property }) {
 
         {/* Thumbnails */}
         {images.length > 1 && (
-          <div className="mt-4 grid grid-cols-3 gap-3 sm:mt-5 sm:max-w-md">
+          <div className="mx-auto mt-4 grid w-full max-w-md grid-cols-[repeat(auto-fit,minmax(96px,128px))] justify-center gap-3 sm:mt-5">
             {images.map((src, i) => (
               <button
                 key={src + i}

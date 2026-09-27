@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { contactUsInfo } from "@/lib/data";
 import AuthField from "@/components/sections/auth/AuthField";
 import AuthTextarea from "@/components/sections/auth/AuthTextarea";
+import MapEmbed from "@/components/ui/MapEmbed";
 
 export default function ContactForm() {
   return (
@@ -47,12 +48,9 @@ export default function ContactForm() {
           </ul>
 
           <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl sm:mt-10">
-            <iframe
+            <MapEmbed
               src={contactUsInfo.mapEmbedSrc}
               title="Photizo Properties office location"
-              className="h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

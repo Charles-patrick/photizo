@@ -15,7 +15,7 @@ export default function SignupForm() {
   }
 
   return (
-    <form className="mt-2 flex flex-col gap-2" onSubmit={handleSubmit}>
+    <form className="mt-6 flex flex-col gap-3" onSubmit={handleSubmit}>
       <AuthField label="Full Name" name="fullName" autoComplete="name" />
       <AuthField
         label="Email Address"
@@ -40,7 +40,7 @@ export default function SignupForm() {
         autoComplete="new-password"
       />
 
-      <label className="flex items-start gap-2 text-xs leading-relaxed text-charcoal-600/70 mt-2">
+      <label className="mt-2 flex items-start gap-2 text-xs leading-relaxed text-charcoal-600/70">
         <input
           type="checkbox"
           required

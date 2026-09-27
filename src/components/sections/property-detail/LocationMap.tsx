@@ -1,4 +1,5 @@
 import type { Property } from "@/types";
+import MapEmbed from "@/components/ui/MapEmbed";
 
 export default function LocationMap({ property }: { property: Property }) {
   return (
@@ -8,12 +9,9 @@ export default function LocationMap({ property }: { property: Property }) {
           Location
         </h2>
         <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl sm:mt-8">
-          <iframe
+          <MapEmbed
             src={property.mapEmbedSrc}
             title={`${property.name} location`}
-            className="h-full w-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
       </div>

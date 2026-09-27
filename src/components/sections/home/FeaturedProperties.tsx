@@ -1,6 +1,7 @@
 import { featuredProperties } from "@/lib/data";
 import ArrowLink from "@/components/ui/ArrowLink";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedProperties() {
   return (
@@ -30,8 +31,13 @@ export default function FeaturedProperties() {
                   className="object-cover transition-transform duration-500 ease-out"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
+                <Link
+                  href={`/our-properties/${property.id}`}
+                  aria-label={`View details for ${property.name}`}
+                  className="absolute inset-0 z-10"
+                />
 
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
+                <div className="absolute inset-x-0 bottom-0 z-20 p-4 sm:p-5 lg:p-6">
                   {/* Price + CTA reveal on hover */}
                   <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
                     <div className="overflow-hidden">
@@ -50,7 +56,10 @@ export default function FeaturedProperties() {
                   <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
                     <div className="overflow-hidden">
                       <div className="pt-2 sm:pt-3">
-                        <ArrowLink href={`/our-properties`} variant="onDark">
+                        <ArrowLink
+                          href={`/our-properties/${property.id}`}
+                          variant="onDark"
+                        >
                           View Details
                         </ArrowLink>
                       </div>

@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Mail, MapPin, Phone } from "lucide-react";
 import { contactUsInfo } from "@/lib/data";
 import AuthField from "@/components/sections/auth/AuthField";
 import AuthTextarea from "@/components/sections/auth/AuthTextarea";
+import MapEmbed from "@/components/ui/MapEmbed";
 
 export default function Support() {
   return (
@@ -96,12 +97,9 @@ export default function Support() {
           </ul>
 
           <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl">
-            <iframe
+            <MapEmbed
               src={contactUsInfo.mapEmbedSrc}
               title="Photizo Properties office location"
-              className="h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

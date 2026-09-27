@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ArrowLink from "@/components/ui/ArrowLink";
 import type { Property } from "@/types";
 
@@ -13,8 +14,13 @@ export default function PropertyCard({ property }: { property: Property }) {
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
+      <Link
+        href={`/our-properties/${property.id}`}
+        aria-label={`View details for ${property.name}`}
+        className="absolute inset-0 z-10"
+      />
 
-      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+      <div className="absolute inset-x-0 bottom-0 z-20 p-4 sm:p-5">
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
           <div className="overflow-hidden">
             {property.price && (

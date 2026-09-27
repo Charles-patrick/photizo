@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ChevronDown } from "lucide-react";
 import type { NewsArticle } from "@/lib/newsroom";
 import type { MediaItem } from "@/content/newsroom/media";
 import NewsCard from "./NewsCard";
@@ -58,18 +59,24 @@ export default function NewsroomTabs({
           />
         </div>
 
-        <select
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value as SortOrder)}
-          className="rounded border border-gold-200 bg-transparent px-3 py-2 text-sm text-gold-200 focus:outline-none"
-        >
-          <option value="recent" className="text-black">
-            Recently Uploaded
-          </option>
-          <option value="oldest" className="text-black">
-            Oldest First
-          </option>
-        </select>
+        <div className="relative shrink-0">
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value as SortOrder)}
+            className="w-full appearance-none rounded border border-gold-200 bg-olive-500 px-3 py-2 pr-6 text-sm text-gold-200 focus:outline-none"
+          >
+            <option value="recent" className="bg-olive-500 text-gold-200">
+              Recently Uploaded
+            </option>
+            <option value="oldest" className="bg-olive-500 text-gold-200">
+              Oldest First
+            </option>
+          </select>
+          <ChevronDown
+            aria-hidden="true"
+            className="pointer-events-none absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-gold-200 "
+          />
+        </div>
       </div>
 
       {/* Tabs */}

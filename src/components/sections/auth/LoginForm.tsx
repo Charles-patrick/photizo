@@ -11,7 +11,7 @@ export default function LoginForm() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    router.replace("/dashboard/customer");
+    router.replace("/dashboard/client");
   }
 
   return (

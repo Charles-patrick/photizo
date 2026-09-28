@@ -87,6 +87,11 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
+
+.dashboard-surface:has(> .dashboard-home) {
+  background: transparent;
+  padding: 0;
+}
 @media (min-width: 640px) {
   body {
     font-size-adjust: 0.48;

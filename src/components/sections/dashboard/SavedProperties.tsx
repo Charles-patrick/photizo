@@ -14,7 +14,7 @@ export default function SavedProperties() {
           Saved Properties
         </h2>
         <Link
-          href="/dashboard/customer/saved-properties"
+          href="/dashboard/client/saved-properties"
           className="text-xs font-semibold text-olive-500 hover:underline"
         >
           View all →

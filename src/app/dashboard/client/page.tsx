@@ -9,9 +9,9 @@ export const metadata: Metadata = { title: "Dashboard | Photizo Properties" };
 
 export default function DashboardPage() {
   return (
-    <>
+    <div className="dashboard-home">
       <Header />
-      <div className="mt-6 grid gap-6 lg:grid-cols-[2fr_1fr] lg:items-start">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[2fr_1fr] lg:items-stretch">
         <div className="flex flex-col gap-6">
           <DashboardStats />
           <MyInspections />
@@ -19,6 +19,6 @@ export default function DashboardPage() {
         <NotificationsPanel />
       </div>
       <SavedProperties />
-    </>
+    </div>
   );
 }

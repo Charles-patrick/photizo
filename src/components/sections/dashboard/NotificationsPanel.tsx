@@ -28,7 +28,7 @@ export default function NotificationsPanel() {
           Notifications
         </h2>
         <Link
-          href="/dashboard/customer/notifications"
+          href="/dashboard/client/notifications"
           className="text-xs font-semibold text-olive-500 hover:underline"
         >
           View all →

@@ -42,7 +42,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
 
   return (
     <div className="flex h-full flex-col">
-      <Link href="/dashboard/customer">
+      <Link href="/dashboard/client">
         <Image
           src="/logo-dark-clear.png"
           alt="Photizo Properties"
@@ -52,7 +52,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
         />
       </Link>
 
-      <nav className="mt-8 flex flex-col gap-1">
+      <nav className="mt-10 flex flex-col gap-3">
         {dashboardNavLinks.map((link) => {
           const Icon = icons[link.icon];
           const active = pathname === link.href;
@@ -78,7 +78,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
       <button
         type="button"
         onClick={handleSignOut}
-        className="flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium text-ember-500 transition-colors hover:bg-ember-100/40"
+        className="flex items-center gap-3 rounded-lg px-4 py-3 my-2 text-sm font-medium text-ember-500 transition-colors hover:bg-ember-100/40"
       >
         <LogOut className="h-4 w-4 shrink-0" />
         Sign Out
@@ -95,7 +95,7 @@ export default function DashboardSidebar() {
       {/* Mobile top bar */}
       <div className="fixed inset-x-0 top-0 z-40 flex items-center justify-between border-b border-charcoal-600/10 bg-gold-50 px-5 py-4 lg:hidden">
         <Link
-          href="/dashboard/customer"
+          href="/dashboard/client"
           className="relative block h-8 w-36"
           aria-label="Photizo Properties dashboard home"
         >
@@ -130,14 +130,14 @@ export default function DashboardSidebar() {
             onClick={() => setMobileOpen(false)}
             className="absolute inset-0 bg-charcoal-900/50"
           />
-          <div className="absolute inset-y-0 left-0 w-72 bg-gold-50 p-6 shadow-xl">
+          <div className="absolute inset-y-0 left-0 w-72 rounded-r-2xl bg-gold-50 p-6 shadow-xl">
             <SidebarContent onNavigate={() => setMobileOpen(false)} />
           </div>
         </div>
       )}
 
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden h-screen w-64 border-r-2 border-olive-500 bg-gold-50 p-6 lg:block">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden h-screen w-64 rounded-r-2xl bg-gold-50 p-6 shadow-sm lg:block">
         <SidebarContent />
       </aside>
     </>

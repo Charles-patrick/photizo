@@ -5,9 +5,9 @@ import { dashboardStats } from "@/lib/data";
 const icons = { calendar: Calendar, receipt: Receipt, bookmark: Bookmark };
 
 const statLinks = {
-  inspections: "/dashboard/customer/my-inspections",
-  transactions: "/dashboard/customer/transactions",
-  saved: "/dashboard/customer/saved-properties",
+  inspections: "/dashboard/client/my-inspections",
+  transactions: "/dashboard/client/transactions",
+  saved: "/dashboard/client/saved-properties",
 } as const;
 
 export default function DashboardStats() {

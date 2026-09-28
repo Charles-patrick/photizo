@@ -21,12 +21,12 @@ export default function Modal({
 }: ModalProps) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-charcoal-900/60 p-4 py-10"
+      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-charcoal-900/60 p-3 sm:items-center sm:p-6"
       onClick={onClose}
     >
       <div
         className={clsx(
-          "relative w-full rounded-2xl bg-gold-50 p-6 shadow-xl sm:p-8",
+          "relative max-h-[calc(100dvh-1.5rem)] w-full overflow-y-auto rounded-2xl bg-gold-50 p-5 shadow-xl sm:max-h-[calc(100dvh-3rem)] sm:p-8",
           maxWidth,
         )}
         onClick={(e) => e.stopPropagation()}

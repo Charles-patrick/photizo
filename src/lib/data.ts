@@ -593,33 +593,33 @@ export interface DashboardNavLink {
 }
 
 export const dashboardNavLinks: DashboardNavLink[] = [
-  { label: "Dashboard", href: "/dashboard/customer", icon: "grid" },
+  { label: "Dashboard", href: "/dashboard/client", icon: "grid" },
   {
     label: "Browse Properties",
-    href: "/dashboard/customer/browse-properties",
+    href: "/dashboard/client/browse-properties",
     icon: "home",
   },
   {
     label: "My Inspections",
-    href: "/dashboard/customer/my-inspections",
+    href: "/dashboard/client/my-inspections",
     icon: "calendar",
   },
   {
     label: "Saved Properties",
-    href: "/dashboard/customer/saved-properties",
+    href: "/dashboard/client/saved-properties",
     icon: "bookmark",
   },
   {
     label: "Transactions",
-    href: "/dashboard/customer/transactions",
+    href: "/dashboard/client/transactions",
     icon: "receipt",
   },
   {
     label: "Notifications",
-    href: "/dashboard/customer/notifications",
+    href: "/dashboard/client/notifications",
     icon: "bell",
   },
-  { label: "Support", href: "/dashboard/customer/support", icon: "help" },
+  { label: "Support", href: "/dashboard/client/support", icon: "help" },
 ];
 
 export const dashboardUser = {

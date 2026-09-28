@@ -28,7 +28,7 @@ export default function DashboardPropertyCard({
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
 
       <Link
-        href={`/dashboard/customer/browse-properties/${property.id}`}
+        href={`/dashboard/client/browse-properties/${property.id}`}
         aria-label={property.name}
         className="absolute inset-0 z-10"
       />

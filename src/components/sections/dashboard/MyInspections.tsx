@@ -24,7 +24,7 @@ export default function MyInspections() {
           My Inspections
         </h2>
         <Link
-          href="/dashboard/customer/my-inspections"
+          href="/dashboard/client/my-inspections"
           className="text-xs font-semibold text-olive-500 hover:underline"
         >
           View all →

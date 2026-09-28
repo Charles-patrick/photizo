@@ -3,7 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Droplet, MapPin, Route, Ruler, ShieldCheck, Zap } from "lucide-react";
+import {
+  CalendarDays,
+  CircleHelp,
+  CreditCard,
+  Droplet,
+  MapPin,
+  Route,
+  Ruler,
+  ShieldCheck,
+  Zap,
+} from "lucide-react";
 import { clsx } from "@/lib/clsx";
 import type { Property } from "@/types";
 import BookInspectionModal from "./BookInspectionModal";
@@ -39,7 +49,7 @@ export default function Detail({ property }: { property: Property }) {
     <div>
       <nav className="flex items-center gap-2 text-xs text-charcoal-600/60 sm:text-sm">
         <Link
-          href="/dashboard/customer/browse-properties"
+          href="/dashboard/client/browse-properties"
           className="hover:text-olive-500"
         >
           Browse Properties
@@ -128,29 +138,33 @@ export default function Detail({ property }: { property: Property }) {
             <button
               type="button"
               onClick={() => setModal("inspection")}
-              className="rounded-lg bg-olive-900 py-3 text-sm font-semibold text-gold-50 transition-colors hover:bg-olive-800"
+              className="flex items-center justify-center gap-2 rounded-lg bg-olive-500 py-3 text-sm font-semibold text-gold-50 transition-colors hover:bg-olive-800"
             >
+              <CalendarDays className="h-4 w-4" />
               Book an Inspection
             </button>
             <button
               type="button"
               onClick={() => setModal("payment")}
-              className="rounded-lg bg-teal-100 py-3 text-sm font-semibold text-teal-700 transition-colors hover:bg-teal-200"
+              className="flex items-center justify-center gap-2 rounded-lg bg-kyc-verified-bg py-3 text-sm font-semibold text-teal-700 transition-colors hover:bg-teal-200"
             >
+              <CreditCard className="h-4 w-4" />
               View payment plans
             </button>
             <button
               type="button"
               onClick={() => setModal("location")}
-              className="rounded-lg border border-charcoal-600/25 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-charcoal-600/5"
+              className="flex items-center justify-center gap-2 rounded-lg border border-charcoal-600/25 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-charcoal-600/5"
             >
+              <MapPin className="h-4 w-4" />
               View map location
             </button>
             <button
               type="button"
               onClick={() => setModal("faq")}
-              className="rounded-lg bg-gold-200/60 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-gold-200"
+              className="flex items-center justify-center gap-2 rounded-lg bg-gold-200/60 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-gold-200"
             >
+              <CircleHelp className="h-4 w-4" />
               FAQs about {shortName}
             </button>
           </div>

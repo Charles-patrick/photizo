@@ -138,7 +138,7 @@ export default function Detail({ property }: { property: Property }) {
             <button
               type="button"
               onClick={() => setModal("inspection")}
-              className="flex items-center justify-center gap-2 rounded-lg bg-olive-500 py-3 text-sm font-semibold text-gold-50 transition-colors hover:bg-olive-800"
+              className="flex items-center justify-center gap-2 rounded-lg bg-olive-500 py-3 text-sm font-semibold text-gold-50 transition-colors"
             >
               <CalendarDays className="h-4 w-4" />
               Book an Inspection
@@ -146,7 +146,7 @@ export default function Detail({ property }: { property: Property }) {
             <button
               type="button"
               onClick={() => setModal("payment")}
-              className="flex items-center justify-center gap-2 rounded-lg bg-kyc-verified-bg py-3 text-sm font-semibold text-teal-700 transition-colors hover:bg-teal-200"
+              className="flex items-center justify-center gap-2 rounded-lg bg-kyc-verified-bg py-3 text-sm font-semibold text-teal-700 transition-colors"
             >
               <CreditCard className="h-4 w-4" />
               View payment plans
@@ -154,7 +154,7 @@ export default function Detail({ property }: { property: Property }) {
             <button
               type="button"
               onClick={() => setModal("location")}
-              className="flex items-center justify-center gap-2 rounded-lg border border-charcoal-600/25 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-charcoal-600/5"
+              className="flex items-center justify-center gap-2 rounded-lg border border-charcoal-600/25 py-3 text-sm font-semibold text-charcoal-600 transition-colors"
             >
               <MapPin className="h-4 w-4" />
               View map location
@@ -162,7 +162,7 @@ export default function Detail({ property }: { property: Property }) {
             <button
               type="button"
               onClick={() => setModal("faq")}
-              className="flex items-center justify-center gap-2 rounded-lg bg-gold-200/60 py-3 text-sm font-semibold text-charcoal-600 transition-colors hover:bg-gold-200"
+              className="flex items-center justify-center gap-2 rounded-lg bg-gold-200/60 py-3 text-sm font-semibold text-charcoal-600 transition-colors"
             >
               <CircleHelp className="h-4 w-4" />
               FAQs about {shortName}

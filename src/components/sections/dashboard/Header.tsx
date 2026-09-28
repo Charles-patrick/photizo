@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <div>
-      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start mt-4">
         <div>
           <p className="text-sm text-charcoal-600/60">{today}</p>
           <h1 className="mt-1 font-display text-2xl font-semibold text-charcoal-600 sm:text-3xl">

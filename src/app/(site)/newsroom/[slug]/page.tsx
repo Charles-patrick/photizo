@@ -15,6 +15,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.title} | Photizo Properties`,
     description: article.excerpt,
+    openGraph: {
+      type: "article",
+      title: `${article.title} | Photizo Properties`,
+      description: article.excerpt,
+      url: `/newsroom/${article.slug}`,
+      images: [
+        {
+          url: article.coverImage,
+          alt: article.title,
+        },
+      ],
+      publishedTime: article.uploadedAt,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${article.title} | Photizo Properties`,
+      description: article.excerpt,
+      images: [article.coverImage],
+    },
   };
 }
 

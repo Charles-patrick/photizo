@@ -89,7 +89,7 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop Get Started */}
-        <div className="hidden shrink-0 lg:block">
+        <div className="hidden shrink-0 lg:block ">
           <ArrowLink
             href="/login"
             variant="onDark"
@@ -131,7 +131,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <ArrowLink href="/login" variant="onDark" className="mt-5">
+          <ArrowLink href="/login" variant="onDark" className="mt-5 !text-base">
             Get Started
           </ArrowLink>
         </div>

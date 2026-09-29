@@ -5,7 +5,11 @@ import DealStatistics from "@/components/sections/realtor/DealStatistics";
 import MyDealsPreview from "@/components/sections/realtor/MyDealsPreview";
 import NotificationsPanel from "@/components/sections/realtor/NotificationsPanel";
 
-export const metadata: Metadata = { title: "Dashboard | Photizo Realtor" };
+export const metadata: Metadata = {
+  title: "Dashboard | Photizo Realtor",
+  description:
+    "Review deal activity, annual performance, and realtor notifications.",
+};
 
 export default function RealtorDashboardPage() {
   return (

@@ -5,7 +5,11 @@ import MyInspections from "@/components/sections/dashboard/MyInspections";
 import NotificationsPanel from "@/components/sections/dashboard/NotificationsPanel";
 import SavedProperties from "@/components/sections/dashboard/SavedProperties";
 
-export const metadata: Metadata = { title: "Dashboard | Photizo Properties" };
+export const metadata: Metadata = {
+  title: "Dashboard | Photizo Properties",
+  description:
+    "View your property inspections, saved homes, transactions, and account updates.",
+};
 
 export default function DashboardPage() {
   return (

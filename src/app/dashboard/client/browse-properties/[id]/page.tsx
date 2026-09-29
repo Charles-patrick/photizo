@@ -20,6 +20,9 @@ export async function generateMetadata({
     title: property
       ? `${property.name} | Photizo Dashboard`
       : "Property Not Found | Photizo Dashboard",
+    description: property
+      ? `Review ${property.name} in ${property.location}, ${property.state} and its available details and payment plans.`
+      : "Browse available properties in the Photizo client portal.",
   };
 }
 

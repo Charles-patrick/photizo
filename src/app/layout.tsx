@@ -34,7 +34,39 @@ const cormorant = localFont({
   display: "swap",
 });
 
-export const metadata: Metadata = { title: "Photizo Properties" };
+const siteDescription =
+  "Discover verified properties, flexible payment plans, and trusted real estate services with Photizo Properties in Lagos, Nigeria.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://photizoproperties.com",
+  ),
+  title: "Photizo Properties | Trusted Real Estate in Lagos",
+  description: siteDescription,
+  applicationName: "Photizo Properties",
+  icons: {
+    icon: "/left-cube-dark.png",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Photizo Properties",
+    locale: "en_NG",
+    title: "Photizo Properties | Trusted Real Estate in Lagos",
+    description: siteDescription,
+    images: [
+      {
+        url: "/properties-hero.jpg",
+        alt: "Modern real estate in Lagos from Photizo Properties",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photizo Properties | Trusted Real Estate in Lagos",
+    description: siteDescription,
+    images: ["/properties-hero.jpg"],
+  },
+};
 
 export default function RootLayout({
   children,

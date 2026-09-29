@@ -18,7 +18,7 @@ export default function MyInspections() {
     .slice(0, 3);
 
   return (
-    <div className="rounded-2xl bg-gold-50 p-5 sm:p-6">
+    <div className="rounded-2xl bg-white p-5 sm:p-6">
       <div className="flex items-center justify-between">
         <h2 className="font-display text-lg font-semibold text-charcoal-600">
           My Inspections

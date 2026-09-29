@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import RealtorSidebar from "@/components/layout/RealtorSidebar";
 
-export default function RealtorDashboardLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "Realtor Dashboard | Photizo Properties",
+  robots: { index: false, follow: false },
+};
+
+export default function RealtorDashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="flex min-h-screen bg-gold-100/40">
       <RealtorSidebar />

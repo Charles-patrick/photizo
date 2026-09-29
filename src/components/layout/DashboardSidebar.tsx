@@ -93,7 +93,7 @@ export default function DashboardSidebar() {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="fixed inset-x-0 top-0 z-40 flex items-center justify-between border-b border-charcoal-600/10 bg-gold-50 px-5 py-4 lg:hidden">
+      <div className="fixed inset-x-0 top-0 z-40 flex items-center justify-between border-b border-charcoal-600/10 bg-white px-5 py-4 lg:hidden">
         <Link
           href="/dashboard/client"
           className="relative block h-8 w-36"
@@ -130,14 +130,14 @@ export default function DashboardSidebar() {
             onClick={() => setMobileOpen(false)}
             className="absolute inset-0 bg-charcoal-900/50"
           />
-          <div className="absolute inset-y-0 left-0 w-72 rounded-r-2xl bg-gold-50 p-6 shadow-xl">
+          <div className="absolute inset-y-0 left-0 w-72 rounded-r-2xl bg-white p-6 shadow-xl">
             <SidebarContent onNavigate={() => setMobileOpen(false)} />
           </div>
         </div>
       )}
 
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden h-screen w-64 rounded-r-2xl bg-gold-50 p-6 shadow-sm lg:block">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden h-screen w-64 rounded-r-2xl bg-white p-6 shadow-sm lg:block">
         <SidebarContent />
       </aside>
     </>

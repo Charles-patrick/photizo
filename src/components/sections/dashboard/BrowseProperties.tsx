@@ -77,7 +77,7 @@ export default function BrowseProperties() {
       </div>
 
       {pageItems.length > 0 ? (
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {pageItems.map((property) => (
             <DashboardPropertyCard key={property.id} property={property} />
           ))}

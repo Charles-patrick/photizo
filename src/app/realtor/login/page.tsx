@@ -6,6 +6,8 @@ import RealtorLoginForm from "@/components/sections/realtor-auth/RealtorLoginFor
 
 export const metadata: Metadata = {
   title: "Realtor Login | Photizo Properties",
+  description: "Sign in to the Photizo Properties realtor portal.",
+  robots: { index: false, follow: false },
 };
 
 export default function RealtorLoginPage() {

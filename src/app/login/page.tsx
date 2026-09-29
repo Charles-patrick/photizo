@@ -6,6 +6,8 @@ import LoginForm from "@/components/sections/auth/LoginForm";
 
 export const metadata: Metadata = {
   title: "Customer Login | Photizo Properties",
+  description: "Sign in to your Photizo Properties client account.",
+  robots: { index: false, follow: false },
 };
 
 export default function LoginPage() {

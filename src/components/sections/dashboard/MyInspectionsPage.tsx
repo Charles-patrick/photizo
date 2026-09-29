@@ -74,7 +74,7 @@ export default function MyInspectionsPage() {
         {visible.map((inspection) => (
           <div
             key={inspection.id}
-            className="flex flex-col gap-4 rounded-2xl border border-charcoal-600/10 bg-gold-50 p-4 sm:flex-row sm:items-center sm:p-5"
+            className="flex flex-col gap-4 rounded-2xl border border-charcoal-600/10 bg-white p-4 sm:flex-row sm:items-center sm:p-5"
           >
             <div className="relative h-32 w-full shrink-0 overflow-hidden rounded-xl sm:h-20 sm:w-28">
               <Image
@@ -125,7 +125,7 @@ export default function MyInspectionsPage() {
         ))}
 
         {visible.length === 0 && (
-          <p className="rounded-2xl bg-gold-50 p-8 text-center text-sm text-charcoal-600/70">
+          <p className="rounded-2xl bg-white p-8 text-center text-sm text-charcoal-600/70">
             No inspections in this category yet.
           </p>
         )}

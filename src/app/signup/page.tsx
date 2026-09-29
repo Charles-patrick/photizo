@@ -6,6 +6,9 @@ import SignupForm from "@/components/sections/auth/SignupForm";
 
 export const metadata: Metadata = {
   title: "Customer Signup | Photizo Properties",
+  description:
+    "Create a Photizo Properties account to explore homes and manage property viewings.",
+  robots: { index: false, follow: false },
 };
 
 export default function SignupPage() {

@@ -61,7 +61,7 @@ export default function Notifications() {
         />
       </div>
 
-      <div className="mt-6 flex flex-col divide-y divide-charcoal-600/10 rounded-2xl bg-gold-50">
+      <div className="mt-6 flex flex-col divide-y divide-charcoal-600/10 rounded-2xl bg-white">
         {filtered.map((notification) => {
           const Icon = icons[notification.icon];
           return (

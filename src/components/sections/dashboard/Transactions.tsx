@@ -70,7 +70,7 @@ export default function Transactions() {
           return (
             <div
               key={txn.id}
-              className="rounded-2xl border border-charcoal-600/10 bg-gold-50 p-4 sm:p-5"
+              className="rounded-2xl border border-charcoal-600/10 bg-white p-4 sm:p-5"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex gap-3 sm:w-1/3">

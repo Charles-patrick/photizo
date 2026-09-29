@@ -8,7 +8,7 @@ export default function SavedProperties() {
     .slice(0, 3);
 
   return (
-    <div className="mt-6 rounded-2xl bg-gold-50 p-5 sm:p-6">
+    <div className="mt-6 rounded-2xl bg-white p-5 sm:p-6">
       <div className="flex items-center justify-between">
         <h2 className="font-display text-lg font-semibold text-olive-500">
           Saved Properties

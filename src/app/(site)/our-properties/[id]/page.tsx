@@ -25,6 +25,31 @@ export async function generateMetadata({
     title: property
       ? `${property.name} | Photizo Properties`
       : "Property Not Found | Photizo Properties",
+    description: property
+      ? `${property.name} in ${property.location}, ${property.state}. Explore property details, features, location, FAQs, and payment plans with Photizo Properties.`
+      : "Explore verified properties in Lagos and across Nigeria with Photizo Properties.",
+    openGraph: property
+      ? {
+          type: "website",
+          title: `${property.name} | Photizo Properties`,
+          description: `${property.name} in ${property.location}, ${property.state}. View details and payment plans.`,
+          url: `/our-properties/${property.id}`,
+          images: [
+            {
+              url: property.image,
+              alt: property.imageAlt,
+            },
+          ],
+        }
+      : undefined,
+    twitter: property
+      ? {
+          card: "summary_large_image",
+          title: `${property.name} | Photizo Properties`,
+          description: `${property.name} in ${property.location}, ${property.state}. View details and payment plans.`,
+          images: [property.image],
+        }
+      : undefined,
   };
 }
 

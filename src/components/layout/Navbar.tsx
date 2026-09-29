@@ -131,7 +131,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <ArrowLink href="/login" variant="onDark" className="mt-5 !text-base">
+          <ArrowLink href="/login" variant="onDark" className="mt-5 text-base!">
             Get Started
           </ArrowLink>
         </div>

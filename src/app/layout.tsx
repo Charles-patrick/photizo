@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   description: siteDescription,
   applicationName: "Photizo Properties",
   icons: {
-    icon: "/left-cube-dark.png",
+    icon: "/logo-cut.png",
   },
   openGraph: {
     type: "website",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/properties-hero.jpg",
+        url: "/logo-cut.png",
         alt: "Modern real estate in Lagos from Photizo Properties",
       },
     ],

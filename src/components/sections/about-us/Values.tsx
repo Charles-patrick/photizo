@@ -21,24 +21,6 @@ const attributeIcons = {
   "list-checks": ListChecks,
 };
 
-function DotsMark({ flipped = false }: { flipped?: boolean }) {
-  return (
-    <svg
-      width="22"
-      height="12"
-      viewBox="0 0 26 14"
-      fill="none"
-      className={flipped ? "-scale-x-100" : undefined}
-    >
-      <rect x="0" y="0" width="6" height="6" fill="currentColor" />
-      <rect x="8" y="0" width="6" height="6" fill="currentColor" />
-      <rect x="16" y="0" width="6" height="6" fill="currentColor" />
-      <rect x="0" y="8" width="6" height="6" fill="currentColor" />
-      <rect x="8" y="8" width="6" height="6" fill="currentColor" />
-    </svg>
-  );
-}
-
 export default function Values() {
   return (
     <>

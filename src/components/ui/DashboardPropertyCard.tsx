@@ -25,7 +25,7 @@ export default function DashboardPropertyCard({
         sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
         className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/70 via-black/5 to-transparent" />
 
       <Link
         href={`/dashboard/client/browse-properties/${property.id}`}

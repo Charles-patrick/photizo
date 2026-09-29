@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="flex h-full flex-col items-center justify-center text-center lg:items-start lg:text-left">
           <Link
             href="/"
-            className="relative block h-12 w-full max-w-36 overflow-hidden rounded-md sm:h-14 sm:max-w-40 lg:h-16 lg:max-w-[200px]"
+            className="relative block h-12 w-full max-w-36 overflow-hidden rounded-md sm:h-14 sm:max-w-40 lg:h-16 lg:max-w-50"
             aria-label="Photizo Properties home"
           >
             <Image
